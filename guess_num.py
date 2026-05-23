@@ -32,5 +32,19 @@ else:
     print("please enter a number next time!")
     quit()
         
-random_num=random.randint(1,x)
-print(random_num)
+random_num=random.randint(0,x)
+
+while True:
+    user_guess=input("make a guess:")
+    if user_guess.isdigit():
+        user_guess=int(user_guess)
+    else:
+        print("please enter a valid number!")
+        continue
+        
+    if user_guess == x:
+        print("you got it")
+        break
+    else:
+        print("you got it wrong")
+       
