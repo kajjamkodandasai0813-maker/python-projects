@@ -33,8 +33,9 @@ else:
     quit()
         
 random_num=random.randint(0,x)
-
+guesses=0
 while True:
+    guesses += 1
     user_guess=input("make a guess:")
     if user_guess.isdigit():
         user_guess=int(user_guess)
@@ -47,4 +48,6 @@ while True:
         break
     else:
         print("you got it wrong")
+        
+print(f"you got it in {guesses} guesses!")
        
